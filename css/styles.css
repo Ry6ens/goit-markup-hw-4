@@ -88,6 +88,7 @@ color: #212121;
 .site-info {
     display: flex;
     margin-left: auto;
+    align-items: baseline;
 }
 
 .site-info .nav-info:not(:last-child) {
@@ -100,42 +101,25 @@ color: #212121;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
+
+    cursor: pointer;
 }
 
-.nav-info::before {
-    display: inline-block;
-    content: '';
-    width: 16px;
-    height: 16px;
-    margin-right: 10px;
-
-    background-repeat: no-repeat;
-    background-position: bottom;
-}
-
-.envelope-smartphone {
+.icon-info {
+    margin-left: 10px;
     color: #757575;
 }
 
-.icon-envelope::before {
-    background-image: url(../images/envelope.svg); 
-}
-
-.icon-smartphone::before {
-    background-image: url(../images/smartphone.svg); 
-}
-
 .nav-link:hover,
-.envelope-smartphone:hover,
+.icon-info:hover,
 .nav-list:hover,
-.nav-info:hover {
-    color: var(--accent-color);
-}
-.envelope-smartphone:focus,
+.nav-info:hover,
+.icon-info:focus,
 .nav-link:focus,
 .nav-list:focus,
 .nav-info:focus {
-    color: var(--focus-color);
+    fill: var(--accent-color);
+    color: var(--accent-color);
 }
 
 /* Hero section */
@@ -167,6 +151,7 @@ color: #212121;
     line-height: 1.34;
     letter-spacing: 0.06em;
     text-align: center;
+    text-transform: uppercase;
     color: #FFFFFF;
 }
 
@@ -184,7 +169,7 @@ color: #212121;
 
 .hero-button:hover,
 .hero-button:focus {
-    background: black;
+    background-color: #188CE8;
 }
 
 .filter {
@@ -194,8 +179,7 @@ color: #212121;
 
 .filter-button {
     margin-right: 8px;
-    padding-left: 22px;
-    padding-right: 22px;
+    padding: 6px 22px 6px 22px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.625;
@@ -215,7 +199,8 @@ color: #212121;
 
 .filter-button:hover,
 .filter-button:focus {
-    color: var(--accent-color);
+    color: #FFFFFF;
+    background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -481,13 +466,10 @@ button {
 }
 
 .footer-address:hover,
-.mail-tel:hover {
-    color: var(--accent-color);
-}
-
+.mail-tel:hover,
 .footer-address:focus,
 .mail-tel:focus {
-    color: var(--focus-color);
+    color: var(--accent-color);
 }
 
 .nav-logo-footer {
