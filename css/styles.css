@@ -118,11 +118,11 @@ color: #212121;
 }
 
 .icon-envelope::before {
-    background-image: url(/images/envelope.svg); 
+    background-image: url(../images/envelope.svg); 
 }
 
 .icon-smartphone::before {
-    background-image: url(/images/smartphone.svg); 
+    background-image: url(../images/smartphone.svg); 
 }
 
 .nav-link:hover,
@@ -151,7 +151,7 @@ color: #212121;
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(/images/hero.jpg);
+      url(../images/hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -259,19 +259,19 @@ button {
 }
 
 .icon-antenna::before {
-    background-image: url(/images/antenna.svg); 
+    background-image: url(../images/antenna.svg); 
 }
 
 .icon-clock::before {
-    background-image: url(/images/clock.svg); 
+    background-image: url(../images/clock.svg); 
 }
 
 .icon-diagram::before {
-    background-image: url(/images/diagram.svg); 
+    background-image: url(../images/diagram.svg); 
 }
 
 .icon-astraunavt::before {
-    background-image: url(/images/astronaut.svg); 
+    background-image: url(../images/astronaut.svg); 
 }
 
 .site-list .features-list + .feastures-list {
@@ -372,28 +372,6 @@ button {
     fill: white;
     background-color: var(--accent-color);
 }
-
-/*
-.team-img::after {
-    display: inline-block;
-    content: '';
-    width: 206px;
-    height: 44px;
-    margin-left: 32px;
-    margin-bottom: 30px;
-}
-
-.icons::after {
-    background-image:
-    url(/images/instagram.svg),
-    url(/images/twiter.svg),
-    url(/images/facebook.svg),
-    url(/images/linkedin.svg);
-
-    background-size: 20px;
-    background-repeat: no-repeat;
-}
-*/
 
 /* Постоянные клиенты */
 
