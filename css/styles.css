@@ -2,6 +2,7 @@
     --primary-text-color: #212121;
     --secondary-text-color: #757575;
     --accent-color: #2196F3;
+    --focus-color: red;
 
 }
 
@@ -9,6 +10,10 @@ body {
     font-family: Roboto, sans-serif;
     color: var(--primary-text-color);
     background-color: #FFFFFF;
+}
+
+.page-header {
+    border-bottom: 1px solid #ECECEC;
 }
 
 .container {
@@ -74,7 +79,10 @@ a {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: #212121;
+}
+
+.nav-link {
+color: #212121;
 }
 
 .site-info {
@@ -94,31 +102,59 @@ a {
     color: var(--secondary-text-color);
 }
 
+.nav-info::before {
+    display: inline-block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.envelope-smartphone {
+    color: #757575;
+}
+
+.icon-envelope::before {
+    background-image: url(/images/envelope.svg); 
+}
+
+.icon-smartphone::before {
+    background-image: url(/images/smartphone.svg); 
+}
+
+.nav-link:hover,
+.envelope-smartphone:hover,
 .nav-list:hover,
-.nav-info:hover,
-.nav-list:focus,
-.nav-info:focus {
+.nav-info:hover {
     color: var(--accent-color);
 }
-
-.nav-list:current{
-    color: rgb(255, 0, 0);
-}
-
-.line {
-    width: 1600px;
-    height: 0px;
-    border: 1px solid #ECECEC;
+.envelope-smartphone:focus,
+.nav-link:focus,
+.nav-list:focus,
+.nav-info:focus {
+    color: var(--focus-color);
 }
 
 /* Hero section */
 
 .hero-section {
-    max-width: 1600px;
     height: 600px;
 
     text-align: center;
+
     background-color: #2F303A;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(/images/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .hero-title {
@@ -210,6 +246,34 @@ button {
     margin-right: 30px;
 }
 
+.features-list::before {
+    display: block;
+    content: '';
+    height: 120px;
+    margin-bottom: 30px;
+
+    background-color: #F5F4FA;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-antenna::before {
+    background-image: url(/images/antenna.svg); 
+}
+
+.icon-clock::before {
+    background-image: url(/images/clock.svg); 
+}
+
+.icon-diagram::before {
+    background-image: url(/images/diagram.svg); 
+}
+
+.icon-astraunavt::before {
+    background-image: url(/images/astronaut.svg); 
+}
+
 .site-list .features-list + .feastures-list {
     margin-top: 30px;
 }
@@ -241,10 +305,16 @@ button {
 
 /* Наша команда */
 
+.ourteam {
+    background-color: #F5F4FA;
+}
+
 .team-img {
+    width: 270px;
     margin-right: 30px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    background-color: #FFFFFF;
 }
 
 .team-list {
@@ -263,7 +333,7 @@ button {
 
 .team-list .text {
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
@@ -271,11 +341,104 @@ button {
     color: var(--secondary-text-color);
 }
 
+.icon-society {
+    display: flex;
+    padding: 0;
+    margin: 16px 32px 30px 32px;
+    list-style: none;
+}
+
+.list-society {
+    display: block;
+    content: '';
+    margin-right: 10px;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.society {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: #AFB1B8;
+}
+
+.society:hover {
+    fill: white;
+    background-color: var(--accent-color);
+}
+
+/*
+.team-img::after {
+    display: inline-block;
+    content: '';
+    width: 206px;
+    height: 44px;
+    margin-left: 32px;
+    margin-bottom: 30px;
+}
+
+.icons::after {
+    background-image:
+    url(/images/instagram.svg),
+    url(/images/twiter.svg),
+    url(/images/facebook.svg),
+    url(/images/linkedin.svg);
+
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+*/
+
+/* Постоянные клиенты */
+
+.clients-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.button-client {
+    display: block;
+    content: '';
+    width: 170px;
+    height: 90px;
+    margin-right: 30px;
+
+    fill: #AFB1B8;
+    background-color: white;
+
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.clients-list:last-child {
+    margin-right: 0;
+}
+
+.button-client:hover {
+    border: 1px solid #2196F3;
+    fill: #2196F3;
+}
+
 /* Портфолио */
 
 .portfolio {
     display: flex;
     flex-wrap: wrap;
+}
+
+.portfolio-card:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-card {
@@ -334,30 +497,48 @@ button {
 
 .page-footer {
     height: 252px;
-padding-top: 60px;
+    padding-top: 60px;
 
     background-color: #2F303A;
 }
 
 .footer-address:hover,
-.footer-mail:hover,
-.footer-tel:hover,
-.footer-address:focus,
-.footer-mail:focus,
-.footer-tel:focus {
+.mail-tel:hover {
     color: var(--accent-color);
+}
+
+.footer-address:focus,
+.mail-tel:focus {
+    color: var(--focus-color);
 }
 
 .nav-logo-footer {
     margin-bottom: 20px;
+    display: flex;
+}
+
+.connect {
+    margin-left: 156px;
+
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 .footer-address {
     margin-bottom: 9px;
+
+    font-style: normal;
+    font-weight: normal;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: #FFFFFF;
+
+    cursor: pointer;
 }
 
 .footer-mail {
@@ -373,5 +554,21 @@ padding-top: 60px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+}
+
+.mail-tel {
     color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-logo {
+    display: block;
+}
+
+.address-icons {
+    display: flex;
+}
+
+.footer-icons {
+    display: flex;
+    margin-left: 70px;
 }
