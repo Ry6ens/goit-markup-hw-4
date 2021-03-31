@@ -88,7 +88,7 @@ color: #212121;
 .site-info {
     display: flex;
     margin-left: auto;
-    align-items: baseline;
+    align-items: center;
 }
 
 .site-info .nav-info:not(:last-child) {
@@ -96,6 +96,8 @@ color: #212121;
 }
 
 .nav-info{
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -465,6 +467,19 @@ button {
     background-color: #2F303A;
 }
 
+.address-icons {
+    display: flex;
+}
+
+.footer {
+    width: 231px;
+}
+
+.footer-icons {
+    display: flex;
+    margin-left: 70px;
+}
+
 .footer-address:hover,
 .mail-tel:hover,
 .footer-address:focus,
@@ -475,9 +490,12 @@ button {
 .nav-logo-footer {
     margin-bottom: 20px;
     display: flex;
+    align-items: baseline;
 }
 
 .connect {
+    margin: 0;
+    padding: 0;
     margin-left: 156px;
 
     font-weight: bold;
@@ -522,13 +540,4 @@ button {
 
 .footer-logo {
     display: block;
-}
-
-.address-icons {
-    display: flex;
-}
-
-.footer-icons {
-    display: flex;
-    margin-left: 70px;
 }
